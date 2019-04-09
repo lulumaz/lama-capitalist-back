@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<world
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='jaxb/World/worldSchema.xsd'>
+    <name>Lama World !</name>
+    <logo>World.jpg</logo>
+    <money>0</money>
+    <score>0</score>
+    <totalangels>0</totalangels>
+    <activeangels>0</activeangels>
+    <angelbonus>0</angelbonus>
+    <lastupdate>09182918</lastupdate>
+    <products>
+        <product>
+            <id>01</id>
+            <name>lamator</name>
+            <logo>lama_01_01.jpg</logo>
+            <cout>10</cout>
+            <croissance>1</croissance>
+            <revenu>2</revenu>
+            <vitesse>3</vitesse>
+            <quantite>4</quantite>
+            <timeleft>5</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>palier1</name>
+                    <logo>lama_01_02.jpg</logo>
+                    <seuil>3.1415926535</seuil>
+                    <idcible>123</idcible>
+                    <ratio>3.1415926535</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>                  
+            </palliers>
+        </product>
+        <product>
+            <id>02</id>
+            <name>lamamour</name>
+            <logo>lama_02_01.jpg</logo>
+            <cout>100</cout>
+            <croissance>1</croissance>
+            <revenu>2</revenu>
+            <vitesse>3</vitesse>
+            <quantite>4</quantite>
+            <timeleft>5</timeleft>
+            <managerUnlocked>false</managerUnlocked>
+            <palliers>
+                <pallier>
+                    <name>palier1</name>
+                    <logo>lama_02_02.jpg</logo>
+                    <seuil>3.1415926535</seuil>
+                    <idcible>123</idcible>
+                    <ratio>3.1415926535</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>                  
+            </palliers>
+        </product>
+    </products>
+    <allunlocks>
+        <pallier>
+            <name>super lamator</name>
+            <logo>super_lamator.jpg</logo>
+            <seuil>200</seuil>
+            <idcible>01</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Lucia di lamamour</name>
+            <logo>Lucia_di_lamamour.jpg</logo>
+            <seuil>250</seuil>
+            <idcible>02</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+    </allunlocks>
+    <upgrades>
+        <pallier>
+            <name>loutre de compagnie</name>
+            <logo>loutre_de_compagnie</logo>
+            <seuil>300</seuil>
+            <idcible>01</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>selle pour lama</name>
+            <logo>selle_pour_lama</logo>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>loutre de compagnie</name>
+            <logo>loutre_de_compagnie</logo>
+            <seuil>300</seuil>
+            <idcible>01</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>selle pour lama</name>
+            <logo>selle_pour_lama</logo>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>loutre de compagnie</name>
+            <logo>loutre_de_compagnie</logo>
+            <seuil>300</seuil>
+            <idcible>01</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>selle pour lama</name>
+            <logo>selle_pour_lama</logo>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>loutre de compagnie</name>
+            <logo>loutre_de_compagnie</logo>
+            <seuil>300</seuil>
+            <idcible>01</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>selle pour lama</name>
+            <logo>selle_pour_lama</logo>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>loutre de compagnie</name>
+            <logo>loutre_de_compagnie</logo>
+            <seuil>300</seuil>
+            <idcible>01</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>selle pour lama</name>
+            <logo>selle_pour_lama</logo>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+    </upgrades>
+    <angelupgrades>
+        <pallier>
+            <name>lamangel</name>
+            <logo>Lucas_le_lamager.jpg</logo>
+            <seuil>250</seuil>
+            <idcible>01</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>angelama</name>
+            <logo>Kelig_le_lamager.jpg</logo>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>angelama</name>
+            <logo>Kelig_le_lamager.jpg</logo>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+    </angelupgrades>
+    <managers>
+        <pallier>
+            <name>Lucas le lamager</name>
+            <logo>Lucas_le_lamager.jpg</logo>
+            <seuil>250</seuil>
+            <idcible>01</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Kelig le lamager</name>
+            <logo>Kelig_le_lamager.jpg</logo>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+    </managers>
+</world>
