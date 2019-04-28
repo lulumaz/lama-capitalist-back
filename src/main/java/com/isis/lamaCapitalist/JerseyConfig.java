@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 @ApplicationPath("/adventureisis")
 public class JerseyConfig extends ResourceConfig {
     public JerseyConfig() {
+        register(CORSResponseFilter.class);
         register(Webservice.class);
     }
 }
