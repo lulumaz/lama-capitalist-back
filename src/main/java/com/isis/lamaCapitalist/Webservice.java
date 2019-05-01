@@ -15,8 +15,12 @@ package com.isis.lamaCapitalist;
 
 
 
+import com.google.gson.Gson;
+import generated.PallierType;
+import generated.ProductType;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
@@ -47,4 +51,35 @@ public class Webservice {
            return Response.ok(services.readWorldFromXml()).build();
         }
     }
+    
+    
+    @PUT
+    @Path("product")
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Response putProduct(@Context HttpServletRequest request, ProductType product) {
+        
+        String username = request.getHeader("X-user");
+        if(username!=null){
+            return Response.ok(services.updateProduct(username,product)).build();
+        } else {
+           return Response.ok(services.updateProduct(product)).build();
+        }
+    }
+    
+    @PUT
+    @Path("manager")
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Response putManager(@Context HttpServletRequest request, PallierType manager) {
+        String username = request.getHeader("X-user");
+        if(username!=null){
+            return Response.ok(services.updateManager(username,manager)).build();
+        } else {
+           return Response.ok(services.updateManager(manager)).build();
+        }
+    }
+    
+    
+    
+
+    
 }
