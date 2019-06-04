@@ -9,9 +9,9 @@ and open the template in the editor.
 <world
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xsi:noNamespaceSchemaLocation='jaxb/World/worldSchema.xsd'>
-    <name>Lama World !</name>
+    <name>Le World des lamas !</name>
     <logo>World.jpg</logo>
-    <money>0</money>
+    <money>70</money>
     <score>0</score>
     <totalangels>0</totalangels>
     <activeangels>0</activeangels>

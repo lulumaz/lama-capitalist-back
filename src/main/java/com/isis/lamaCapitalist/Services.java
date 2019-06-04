@@ -55,6 +55,11 @@ public class Services {
                 jaxbContext = JAXBContext.newInstance(World.class);
                 Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
                 w = (World) unmarshaller.unmarshal(input);
+                //TODO mis à jours du score
+                updatePoducts(w);
+                
+                
+                
                 return w;
             } catch (JAXBException ex) {
                 Logger.getLogger(Services.class.getName()).log(Level.SEVERE, null, ex);
@@ -125,6 +130,7 @@ public class Services {
         // en paramètre
         ProductType product = findProductById(world, newproduct.getId());
         if (product == null) { return false;}
+        
         // calculer la variation de quantité. Si elle est positive c'est
         // que le joueur a acheté une certaine quantité de ce produit
         // sinon c’est qu’il s’agit d’un lancement de production.
@@ -132,10 +138,16 @@ public class Services {
         if (qtchange > 0) {
             // soustraire de l'argent du joueur le cout de la quantité
             // achetée et mettre à jour la quantité de product
+            world.setMoney(world.getMoney() - qtchange * product.getCout());
+            product.setQuantite(qtchange + product.getQuantite());
             } else {
             // initialiser product.timeleft à product.vitesse
             // pour lancer la production
+             product.setTimeleft(product.getVitesse());
+             world.setLastupdate(System.currentTimeMillis());
             }
+        
+        
         // sauvegarder les changements du monde
         saveWordlToXml(world, username);
         return true;
@@ -183,6 +195,19 @@ public class Services {
     }
     
     public Boolean updateManager(PallierType newmanager) {
-        retunr updateManager(null, newmanager);
+        return updateManager(null, newmanager);
+    }
+
+    private void updatePoducts(World w) {//met à jours tous les produits
+       float timeDiff = System.currentTimeMillis() - w .getLastupdate();
+       for(ProductType p : w.getProducts().getProduct()){
+           
+           if(p.getTimeleft() <= timeDiff){
+               //TODO money 
+               //TODO gérer bug = 0
+           }
+           
+       }
+        
     }
 }
