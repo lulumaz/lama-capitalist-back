@@ -21,18 +21,18 @@ and open the template in the editor.
         <product>
             <id>01</id>
             <name>lamator</name>
-            <logo>lama1.jpg</logo>
+            <logo>/icones/lama1.jpg</logo>
             <cout>10</cout>
             <croissance>1</croissance>
             <revenu>2</revenu>
-            <vitesse>3</vitesse>
+            <vitesse>10000</vitesse>
             <quantite>4</quantite>
             <timeleft>5</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
                     <name>palier1</name>
-                    <logo>lama1.jpg.jpg</logo>
+                    <logo>/icones/lama1.jpg</logo>
                     <seuil>3.1415926535</seuil>
                     <idcible>123</idcible>
                     <ratio>3.1415926535</ratio>
@@ -44,18 +44,18 @@ and open the template in the editor.
         <product>
             <id>02</id>
             <name>lamamour</name>
-            <logo>lama2.jpg</logo>
+            <logo>/icones/lama2.jpg</logo>
             <cout>100</cout>
             <croissance>1</croissance>
             <revenu>2</revenu>
-            <vitesse>3</vitesse>
+            <vitesse>20000</vitesse>
             <quantite>4</quantite>
             <timeleft>5</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
                     <name>palier1</name>
-                    <logo>lama2.jpg</logo>
+                    <logo>/icones/lama2.jpg</logo>
                     <seuil>3.1415926535</seuil>
                     <idcible>123</idcible>
                     <ratio>3.1415926535</ratio>
@@ -68,7 +68,7 @@ and open the template in the editor.
     <allunlocks>
         <pallier>
             <name>super lamator</name>
-            <logo>lama3.jpg</logo>
+            <logo>/icones/lama3.jpg</logo>
             <seuil>200</seuil>
             <idcible>01</idcible>
             <ratio>2.0</ratio>
@@ -77,7 +77,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>Lucia di lamamour</name>
-            <logo>lama4.jpg</logo>
+            <logo>/icones/lama4.jpg</logo>
             <seuil>250</seuil>
             <idcible>02</idcible>
             <ratio>2.0</ratio>
@@ -88,7 +88,7 @@ and open the template in the editor.
     <upgrades>
         <pallier>
             <name>loutre de compagnie</name>
-            <logo>loutre1.jpg</logo>
+            <logo>/icones/loutre1.jpg</logo>
             <seuil>300</seuil>
             <idcible>01</idcible>
             <ratio>2.0</ratio>
@@ -97,7 +97,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>selle pour lama</name>
-            <logo>lama5.jpg</logo>
+            <logo>/icones/lama5.jpg</logo>
             <seuil>300</seuil>
             <idcible>02</idcible>
             <ratio>2.0</ratio>
@@ -106,7 +106,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>loutre de compagnie</name>
-            <logo>loutre1.jpg</logo>
+            <logo>/icones/loutre1.jpg</logo>
             <seuil>300</seuil>
             <idcible>01</idcible>
             <ratio>2.0</ratio>
@@ -115,7 +115,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>selle pour lama</name>
-            <logo>lama5.jpg</logo>
+            <logo>/icones/lama5.jpg</logo>
             <seuil>300</seuil>
             <idcible>02</idcible>
             <ratio>2.0</ratio>
@@ -124,7 +124,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>loutre de compagnie</name>
-            <logo>loutre1.jpg</logo>
+            <logo>/icones/loutre1.jpg</logo>
             <seuil>300</seuil>
             <idcible>01</idcible>
             <ratio>2.0</ratio>
@@ -133,7 +133,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>selle pour lama</name>
-            <logo>lama5.jpg</logo>
+            <logo>/icones/lama5.jpg</logo>
             <seuil>300</seuil>
             <idcible>02</idcible>
             <ratio>2.0</ratio>
@@ -142,7 +142,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>loutre de compagnie</name>
-            <logo>loutre1.jpg</logo>
+            <logo>/icones/loutre1.jpg</logo>
             <seuil>300</seuil>
             <idcible>01</idcible>
             <ratio>2.0</ratio>
@@ -151,7 +151,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>selle pour lama</name>
-            <logo>lama5.jpg</logo>
+            <logo>/icones/lama5.jpg</logo>
             <seuil>300</seuil>
             <idcible>02</idcible>
             <ratio>2.0</ratio>
@@ -160,7 +160,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>loutre de compagnie</name>
-            <logo>loutre1.jpg</logo>
+            <logo>/icones/loutre1.jpg</logo>
             <seuil>300</seuil>
             <idcible>01</idcible>
             <ratio>2.0</ratio>
@@ -169,7 +169,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>selle pour lama</name>
-            <logo>lama5.jpg</logo>
+            <logo>/icones/lama5.jpg</logo>
             <seuil>300</seuil>
             <idcible>02</idcible>
             <ratio>2.0</ratio>
@@ -180,7 +180,7 @@ and open the template in the editor.
     <angelupgrades>
         <pallier>
             <name>lamangel</name>
-            <logo>lama6.jpg</logo>
+            <logo>/icones/lama6.jpg</logo>
             <seuil>250</seuil>
             <idcible>01</idcible>
             <ratio>2.0</ratio>
@@ -189,7 +189,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>angelama</name>
-            <logo>lama7.jpg</logo>
+            <logo>/icones/lama7.jpg</logo>
             <seuil>300</seuil>
             <idcible>02</idcible>
             <ratio>2.0</ratio>
@@ -198,7 +198,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>angelama</name>
-            <logo>lama8.jpg</logo>
+            <logo>/icones/lama8.jpg</logo>
             <seuil>300</seuil>
             <idcible>02</idcible>
             <ratio>2.0</ratio>
@@ -209,7 +209,7 @@ and open the template in the editor.
     <managers>
         <pallier>
             <name>Lucas le lamager</name>
-            <logo>lama9.jpg</logo>
+            <logo>/icones/lama9.jpg</logo>
             <seuil>250</seuil>
             <idcible>01</idcible>
             <ratio>2.0</ratio>
@@ -218,7 +218,7 @@ and open the template in the editor.
         </pallier>
         <pallier>
             <name>Kelig le lamager</name>
-            <logo>lama10.jpg</logo>
+            <logo>/icones/lama10.jpg</logo>
             <seuil>300</seuil>
             <idcible>02</idcible>
             <ratio>2.0</ratio>

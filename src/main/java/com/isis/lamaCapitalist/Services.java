@@ -39,6 +39,7 @@ public class Services {
             JAXBContext jaxbContext = JAXBContext.newInstance(World.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             w = (World) unmarshaller.unmarshal(input);
+            updatePoducts(w);
             return w;
         } catch (JAXBException ex) {
             Logger.getLogger(Services.class.getName()).log(Level.SEVERE, null, ex);
@@ -55,7 +56,6 @@ public class Services {
                 jaxbContext = JAXBContext.newInstance(World.class);
                 Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
                 w = (World) unmarshaller.unmarshal(input);
-                //TODO mis à jours du score
                 updatePoducts(w);
                 
                 
@@ -129,24 +129,29 @@ public class Services {
         // trouver dans ce monde, le produit équivalent à celui passé
         // en paramètre
         ProductType product = findProductById(world, newproduct.getId());
-        if (product == null) { return false;}
+        if (product == null) { 
+            System.err.println("Le produit du monde " + username + " n'a pas été trouvé : id "+newproduct.getId());
+            return false;
+        }
         
         // calculer la variation de quantité. Si elle est positive c'est
         // que le joueur a acheté une certaine quantité de ce produit
         // sinon c’est qu’il s’agit d’un lancement de production.
         int qtchange = newproduct.getQuantite() - product.getQuantite();
+        System.out.println("qtchange"+qtchange);
         if (qtchange > 0) {
             // soustraire de l'argent du joueur le cout de la quantité
             // achetée et mettre à jour la quantité de product
             world.setMoney(world.getMoney() - qtchange * product.getCout());
             product.setQuantite(qtchange + product.getQuantite());
-            } else {
+        } else {
             // initialiser product.timeleft à product.vitesse
             // pour lancer la production
              product.setTimeleft(product.getVitesse());
              world.setLastupdate(System.currentTimeMillis());
-            }
+        }
         
+        //System.err.println(world.getProducts().getProduct().get(0).getTimeleft());
         
         // sauvegarder les changements du monde
         saveWordlToXml(world, username);
@@ -202,12 +207,33 @@ public class Services {
        float timeDiff = System.currentTimeMillis() - w .getLastupdate();
        for(ProductType p : w.getProducts().getProduct()){
            
-           if(p.getTimeleft() <= timeDiff){
-               //TODO money 
-               //TODO gérer bug = 0
+           if(p.getTimeleft() <= timeDiff && p.getTimeleft()>0){
+               //ajout du revenu du produit dans le score
+               PallierType manager = findManager(w,p);
+              
+                w.setMoney(p.getRevenu()*p.getQuantite() + w.getMoney());
+                p.setTimeleft(0);
+                if(manager != null && manager.isUnlocked()){
+                    w.setMoney(p.getRevenu()*p.getQuantite()*p.getVitesse()/timeDiff + w.getMoney());
+                }
+                   
+                w.setLastupdate(System.currentTimeMillis());
+                              
            }
            
        }
         
     }
+    
+    private PallierType findManager(World w, ProductType p){
+        
+        for ( PallierType manager : w.getManagers().getPallier()){
+            if(manager.getIdcible() == p.getId()){
+                return manager;
+            }
+        }
+        
+        return null;
+    }
+     
 }
