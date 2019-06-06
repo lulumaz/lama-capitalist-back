@@ -138,7 +138,7 @@ public class Services {
         // que le joueur a acheté une certaine quantité de ce produit
         // sinon c’est qu’il s’agit d’un lancement de production.
         int qtchange = newproduct.getQuantite() - product.getQuantite();
-        System.out.println("qtchange"+qtchange);
+        System.out.println("qtchange: "+qtchange);
         if (qtchange > 0) {
             // soustraire de l'argent du joueur le cout de la quantité
             // achetée et mettre à jour la quantité de product
@@ -206,22 +206,32 @@ public class Services {
     private void updatePoducts(World w) {//met à jours tous les produits
        float timeDiff = System.currentTimeMillis() - w .getLastupdate();
        for(ProductType p : w.getProducts().getProduct()){
+            
            
-           if(p.getTimeleft() <= timeDiff && p.getTimeleft()>0){
-               //ajout du revenu du produit dans le score
-               PallierType manager = findManager(w,p);
-              
+           
+            PallierType manager = findManager(w,p);            
+            if(manager != null && manager.isUnlocked()){ //les managers
+                
+                double nbProduction = Math.floor((timeDiff - p.getTimeleft())/p.getVitesse());
+                w.setMoney(p.getRevenu()*p.getQuantite()*p.getVitesse()* nbProduction + w.getMoney());
+                w.setScore(w.getScore() + p.getRevenu()*p.getQuantite()*p.getVitesse()* nbProduction );
+                
+                long newTimeLeft = (long) ((timeDiff - p.getTimeleft())%p.getVitesse());
+                p.setTimeleft(newTimeLeft);
+                
+                
+            } else if(p.getTimeleft() <= timeDiff && p.getTimeleft()>0){            //click sur un produit
+               //ajout du revenu du produit dans le score              
                 w.setMoney(p.getRevenu()*p.getQuantite() + w.getMoney());
+                w.setScore(w.getScore() + p.getRevenu()*p.getQuantite() );
                 p.setTimeleft(0);
-                if(manager != null && manager.isUnlocked()){
-                    w.setMoney(p.getRevenu()*p.getQuantite()*p.getVitesse()/timeDiff + w.getMoney());
-                }
-                   
-                w.setLastupdate(System.currentTimeMillis());
-                              
-           }
+            }
+            
+            
+            
+            
            
-       }
+       } 
         
     }
     
