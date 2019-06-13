@@ -11,7 +11,7 @@ and open the template in the editor.
     xsi:noNamespaceSchemaLocation='jaxb/World/worldSchema.xsd'>
     <name>Le World des lamas !</name>
     <logo>World.jpg</logo>
-    <money>70</money>
+    <money>70000000000</money>
     <score>0</score>
     <totalangels>0</totalangels>
     <activeangels>0</activeangels>
@@ -23,10 +23,10 @@ and open the template in the editor.
             <name>lamator</name>
             <logo>/icones/lama1.jpg</logo>
             <cout>10</cout>
-            <croissance>1</croissance>
+            <croissance>1.02</croissance>
             <revenu>2</revenu>
-            <vitesse>10000</vitesse>
-            <quantite>4</quantite>
+            <vitesse>3000</vitesse>
+            <quantite>1</quantite>
             <timeleft>5</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>

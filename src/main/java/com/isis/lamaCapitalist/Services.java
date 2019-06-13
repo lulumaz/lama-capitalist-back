@@ -40,6 +40,7 @@ public class Services {
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             w = (World) unmarshaller.unmarshal(input);
             updatePoducts(w);
+            saveWordlToXml(w);
             return w;
         } catch (JAXBException ex) {
             Logger.getLogger(Services.class.getName()).log(Level.SEVERE, null, ex);
@@ -57,9 +58,7 @@ public class Services {
                 Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
                 w = (World) unmarshaller.unmarshal(input);
                 updatePoducts(w);
-                
-                
-                
+                saveWordlToXml(w,pseudo);         
                 return w;
             } catch (JAXBException ex) {
                 Logger.getLogger(Services.class.getName()).log(Level.SEVERE, null, ex);
@@ -138,11 +137,11 @@ public class Services {
         // que le joueur a acheté une certaine quantité de ce produit
         // sinon c’est qu’il s’agit d’un lancement de production.
         int qtchange = newproduct.getQuantite() - product.getQuantite();
-        System.out.println("qtchange: "+qtchange);
         if (qtchange > 0) {
             // soustraire de l'argent du joueur le cout de la quantité
             // achetée et mettre à jour la quantité de product
-            world.setMoney(world.getMoney() - qtchange * product.getCout());
+            double cost = (product.getCout() * (1 - Math.pow(product.getCroissance(), newproduct.getQuantite()))/(1 - product.getCroissance()));
+            world.setMoney(world.getMoney() - cost);
             product.setQuantite(qtchange + product.getQuantite());
         } else {
             // initialiser product.timeleft à product.vitesse
@@ -151,10 +150,12 @@ public class Services {
              world.setLastupdate(System.currentTimeMillis());
         }
         
-        //System.err.println(world.getProducts().getProduct().get(0).getTimeleft());
+        
         
         // sauvegarder les changements du monde
         saveWordlToXml(world, username);
+       
+        
         return true;
     }
      public Boolean updateProduct(ProductType newproduct) {
