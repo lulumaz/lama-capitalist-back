@@ -40,6 +40,7 @@ public class Services {
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             w = (World) unmarshaller.unmarshal(input);
             updatePoducts(w);
+            w.setLastupdate(System.currentTimeMillis());
             saveWordlToXml(w);
             return w;
         } catch (JAXBException ex) {
@@ -58,7 +59,8 @@ public class Services {
                 Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
                 w = (World) unmarshaller.unmarshal(input);
                 updatePoducts(w);
-                saveWordlToXml(w,pseudo);         
+                w.setLastupdate(System.currentTimeMillis());
+                saveWordlToXml(w,pseudo);  
                 return w;
             } catch (JAXBException ex) {
                 Logger.getLogger(Services.class.getName()).log(Level.SEVERE, null, ex);
@@ -164,7 +166,7 @@ public class Services {
     private PallierType findManagerByName(World world, String managerName){
         PalliersType managers = world.getManagers();
         for (PallierType manager : managers.getPallier()) {
-            if(manager.getName()== managerName){
+            if(manager.getName().equals(managerName)){
                 return manager;
             }
         }
@@ -184,17 +186,29 @@ public class Services {
         // trouver dans ce monde, le manager équivalent à celui passé
         // en paramètre
         PallierType manager = findManagerByName(world, newmanager.getName());
+        
         if (manager == null) {
+            System.err.println("manager : "+ newmanager.getName() +" non trouvé");
             return false;
         }
-        // débloquer ce manager
-        // trouver le produit correspondant au manager
-        ProductType product = findProductById(world, manager.getIdcible());
-        if (product == null) {
-            return false;
+        
+        if(manager.isUnlocked()!=newmanager.isUnlocked()){
+            // débloquer ce manager
+            manager.setUnlocked(newmanager.isUnlocked());
+            // trouver le produit correspondant au manager
+            ProductType product = findProductById(world, manager.getIdcible());
+            if (product == null) {
+                return false;
+            }
+            // débloquer le manager de ce produit
+            product.setManagerUnlocked(newmanager.isUnlocked());
+
+            // soustraire de l'argent du joueur le cout du manager
+            world.setMoney(world.getMoney()-manager.getSeuil());
+            
         }
-        // débloquer le manager de ce produit
-        // soustraire de l'argent du joueur le cout du manager
+        
+        
         // sauvegarder les changements au monde
         saveWordlToXml(world,username);
         return true;
@@ -210,16 +224,14 @@ public class Services {
             
            
            
-            PallierType manager = findManager(w,p);            
-            if(manager != null && manager.isUnlocked()){ //les managers
-                
+                       
+            if(p.isManagerUnlocked()){ //les managers
+
                 double nbProduction = Math.floor((timeDiff - p.getTimeleft())/p.getVitesse());
-                w.setMoney(p.getRevenu()*p.getQuantite()*p.getVitesse()* nbProduction + w.getMoney());
-                w.setScore(w.getScore() + p.getRevenu()*p.getQuantite()*p.getVitesse()* nbProduction );
-                
+                w.setMoney(p.getRevenu()*p.getQuantite()* nbProduction + w.getMoney());
+                w.setScore(w.getScore() + p.getRevenu()*p.getQuantite()* nbProduction );
                 long newTimeLeft = (long) ((timeDiff - p.getTimeleft())%p.getVitesse());
                 p.setTimeleft(newTimeLeft);
-                
                 
             } else if(p.getTimeleft() <= timeDiff && p.getTimeleft()>0){            //click sur un produit
                //ajout du revenu du produit dans le score              
