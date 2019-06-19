@@ -1,24 +1,26 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<world>
+
+<world
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='jaxb/World/worldSchema.xsd'>
     <name>Le monde des lamas !</name>
     <logo>/icones/lama11.png</logo>
-    <money>0.0</money>
-    <score>0.0</score>
-    <totalangels>0.0</totalangels>
-    <activeangels>0.0</activeangels>
+    <money>10</money>
+    <score>0</score>
+    <totalangels>0</totalangels>
+    <activeangels>0</activeangels>
     <angelbonus>0</angelbonus>
-    <lastupdate>1560931963591</lastupdate>
+    <lastupdate>09182918</lastupdate>
     <products>
         <product>
             <id>0</id>
             <name>Lamacaron</name>
             <logo>/icones/lama0.jpg</logo>
-            <cout>10.0</cout>
+            <cout>10</cout> 
             <croissance>1.1</croissance>
-            <revenu>2.0</revenu>
+            <revenu>2</revenu>
             <vitesse>1000</vitesse>
             <quantite>1</quantite>
-            <timeleft>0</timeleft>
+            <timeleft>5</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -29,19 +31,19 @@
                     <ratio>3.1415926535</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
-                </pallier>
+                </pallier>                  
             </palliers>
         </product>
         <product>
             <id>1</id>
             <name>Lamamour</name>
             <logo>/icones/lama1.jpg</logo>
-            <cout>50.0</cout>
-            <croissance>1.2</croissance>
-            <revenu>13.0</revenu>
-            <vitesse>5000</vitesse>
+            <cout>100</cout>
+            <croissance>1</croissance>
+            <revenu>20</revenu>
+            <vitesse>10000</vitesse>
             <quantite>0</quantite>
-            <timeleft>0</timeleft>
+            <timeleft>5</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -52,19 +54,19 @@
                     <ratio>3.1415926535</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
-                </pallier>
+                </pallier>                  
             </palliers>
         </product>
         <product>
-            <id>2</id>
+            <id>02</id>
             <name>Lamaternelle</name>
             <logo>/icones/lama2.jpg</logo>
-            <cout>200.0</cout>
-            <croissance>1.3</croissance>
-            <revenu>60.0</revenu>
-            <vitesse>60000</vitesse>
-            <quantite>0</quantite>
-            <timeleft>0</timeleft>
+            <cout>25000</cout>
+            <croissance>1</croissance>
+            <revenu>2</revenu>
+            <vitesse></vitesse>
+            <quantite>4</quantite>
+            <timeleft>5</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -75,19 +77,19 @@
                     <ratio>3.1415926535</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
-                </pallier>
+                </pallier>                  
             </palliers>
         </product>
         <product>
-            <id>3</id>
+            <id>03</id>
             <name>Lamachine</name>
             <logo>/icones/lama4.jpg</logo>
-            <cout>800.0</cout>
-            <croissance>1.4</croissance>
-            <revenu>250.0</revenu>
-            <vitesse>150000</vitesse>
-            <quantite>0</quantite>
-            <timeleft>0</timeleft>
+            <cout>100</cout>
+            <croissance>1</croissance>
+            <revenu>2</revenu>
+            <vitesse>20000</vitesse>
+            <quantite>4</quantite>
+            <timeleft>5</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -98,19 +100,19 @@
                     <ratio>3.1415926535</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
-                </pallier>
+                </pallier>                  
             </palliers>
         </product>
         <product>
-            <id>4</id>
+            <id>04</id>
             <name>Lamasochiste</name>
             <logo>/icones/lama5.jpg</logo>
-            <cout>3800.0</cout>
-            <croissance>1.5</croissance>
-            <revenu>1200.0</revenu>
-            <vitesse>300000</vitesse>
-            <quantite>0</quantite>
-            <timeleft>0</timeleft>
+            <cout>100</cout>
+            <croissance>1</croissance>
+            <revenu>2</revenu>
+            <vitesse>20000</vitesse>
+            <quantite>4</quantite>
+            <timeleft>5</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -121,19 +123,19 @@
                     <ratio>3.1415926535</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
-                </pallier>
+                </pallier>                  
             </palliers>
         </product>
         <product>
-            <id>5</id>
+            <id>05</id>
             <name>Lamagie</name>
             <logo>/icones/lama6.jpg</logo>
-            <cout>76000.0</cout>
-            <croissance>1.6</croissance>
-            <revenu>27000.0</revenu>
-            <vitesse>600000</vitesse>
-            <quantite>0</quantite>
-            <timeleft>0</timeleft>
+            <cout>100</cout>
+            <croissance>1</croissance>
+            <revenu>2</revenu>
+            <vitesse>20000</vitesse>
+            <quantite>4</quantite>
+            <timeleft>5</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -144,7 +146,7 @@
                     <ratio>3.1415926535</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
-                </pallier>
+                </pallier>                  
             </palliers>
         </product>
     </products>
@@ -152,8 +154,8 @@
         <pallier>
             <name>super lamator</name>
             <logo>/icones/lama3.jpg</logo>
-            <seuil>200.0</seuil>
-            <idcible>1</idcible>
+            <seuil>200</seuil>
+            <idcible>01</idcible>
             <ratio>2.0</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
@@ -161,8 +163,8 @@
         <pallier>
             <name>Lucia di lamamour</name>
             <logo>/icones/lama4.jpg</logo>
-            <seuil>250.0</seuil>
-            <idcible>2</idcible>
+            <seuil>250</seuil>
+            <idcible>02</idcible>
             <ratio>2.0</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
@@ -172,8 +174,8 @@
         <pallier>
             <name>loutre de compagnie</name>
             <logo>/icones/loutre1.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>1</idcible>
+            <seuil>300</seuil>
+            <idcible>01</idcible>
             <ratio>2.0</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
@@ -181,8 +183,8 @@
         <pallier>
             <name>selle pour lama</name>
             <logo>/icones/lama5.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>2</idcible>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
@@ -190,8 +192,8 @@
         <pallier>
             <name>loutre de compagnie</name>
             <logo>/icones/loutre1.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>1</idcible>
+            <seuil>300</seuil>
+            <idcible>01</idcible>
             <ratio>2.0</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
@@ -199,8 +201,8 @@
         <pallier>
             <name>selle pour lama</name>
             <logo>/icones/lama5.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>2</idcible>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
@@ -208,8 +210,8 @@
         <pallier>
             <name>loutre de compagnie</name>
             <logo>/icones/loutre1.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>1</idcible>
+            <seuil>300</seuil>
+            <idcible>01</idcible>
             <ratio>2.0</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
@@ -217,8 +219,8 @@
         <pallier>
             <name>selle pour lama</name>
             <logo>/icones/lama5.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>2</idcible>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
@@ -226,8 +228,8 @@
         <pallier>
             <name>loutre de compagnie</name>
             <logo>/icones/loutre1.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>1</idcible>
+            <seuil>300</seuil>
+            <idcible>01</idcible>
             <ratio>2.0</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
@@ -235,8 +237,8 @@
         <pallier>
             <name>selle pour lama</name>
             <logo>/icones/lama5.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>2</idcible>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
@@ -244,8 +246,8 @@
         <pallier>
             <name>Lamarauxcanards</name>
             <logo>/icones/loutre1.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>1</idcible>
+            <seuil>300</seuil>
+            <idcible>01</idcible>
             <ratio>2.0</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
@@ -253,8 +255,8 @@
         <pallier>
             <name>selle pour lama</name>
             <logo>/icones/lama5.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>2</idcible>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
@@ -264,8 +266,8 @@
         <pallier>
             <name>lamangel</name>
             <logo>/icones/lama6.jpg</logo>
-            <seuil>250.0</seuil>
-            <idcible>1</idcible>
+            <seuil>250</seuil>
+            <idcible>01</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
@@ -273,8 +275,8 @@
         <pallier>
             <name>angelama</name>
             <logo>/icones/lama7.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>2</idcible>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
@@ -282,8 +284,8 @@
         <pallier>
             <name>angelama</name>
             <logo>/icones/lama8.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>2</idcible>
+            <seuil>300</seuil>
+            <idcible>02</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
@@ -293,7 +295,7 @@
         <pallier>
             <name>Lamalefique</name>
             <logo>/icones/lama9.jpg</logo>
-            <seuil>50.0</seuil>
+            <seuil>50</seuil>
             <idcible>0</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
@@ -302,8 +304,8 @@
         <pallier>
             <name>Lamaternelle</name>
             <logo>/icones/lama10.jpg</logo>
-            <seuil>1000.0</seuil>
-            <idcible>1</idcible>
+            <seuil>1000</seuil>
+            <idcible>01</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
@@ -311,7 +313,7 @@
         <pallier>
             <name>Le lamacho</name>
             <logo>/icones/lama9.jpg</logo>
-            <seuil>10000.0</seuil>
+            <seuil>10000</seuil>
             <idcible>0</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
@@ -320,7 +322,7 @@
         <pallier>
             <name>Le lamator</name>
             <logo>/icones/lama9.jpg</logo>
-            <seuil>100000.0</seuil>
+            <seuil>100000</seuil>
             <idcible>0</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
@@ -329,7 +331,7 @@
         <pallier>
             <name>Lamajorante</name>
             <logo>/icones/lama9.jpg</logo>
-            <seuil>1000000.0</seuil>
+            <seuil>1000000</seuil>
             <idcible>0</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
@@ -338,11 +340,12 @@
         <pallier>
             <name>Lamafia</name>
             <logo>/icones/lama9.jpg</logo>
-            <seuil>1000000.0</seuil>
+            <seuil>1000000</seuil>
             <idcible>0</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
+
     </managers>
 </world>

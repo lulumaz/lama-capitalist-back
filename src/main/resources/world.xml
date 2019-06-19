@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
 
 <world
     xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xsi:noNamespaceSchemaLocation='jaxb/World/worldSchema.xsd'>
-    <name>Le World des lamas !</name>
+    <name>Le monde des lamas !</name>
     <logo>/icones/lama11.png</logo>
-    <money>700</money>
+    <money>0</money>
     <score>0</score>
     <totalangels>0</totalangels>
     <activeangels>0</activeangels>
@@ -19,15 +12,15 @@ and open the template in the editor.
     <lastupdate>09182918</lastupdate>
     <products>
         <product>
-            <id>00</id>
-            <name>lamator</name>
-            <logo>/icones/lama1.jpg</logo>
-            <cout>10</cout>
-            <croissance>1.02</croissance>
+            <id>0</id>
+            <name>Lamacaron</name>
+            <logo>/icones/lama0.jpg</logo>
+            <cout>10</cout> 
+            <croissance>1.1</croissance>
             <revenu>2</revenu>
-            <vitesse>3000</vitesse>
+            <vitesse>1000</vitesse>
             <quantite>1</quantite>
-            <timeleft>5</timeleft>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -43,14 +36,14 @@ and open the template in the editor.
         </product>
         <product>
             <id>1</id>
-            <name>lamamour</name>
-            <logo>/icones/lama2.jpg</logo>
-            <cout>100</cout>
-            <croissance>1</croissance>
-            <revenu>2</revenu>
-            <vitesse>20000</vitesse>
-            <quantite>4</quantite>
-            <timeleft>5</timeleft>
+            <name>Lamamour</name>
+            <logo>/icones/lama1.jpg</logo>
+            <cout>50</cout>
+            <croissance>1.2</croissance>
+            <revenu>13</revenu>
+            <vitesse>5000</vitesse>
+            <quantite>0</quantite>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -66,14 +59,14 @@ and open the template in the editor.
         </product>
         <product>
             <id>02</id>
-            <name>lamamour</name>
-            <logo>/icones/lama3.jpg</logo>
-            <cout>100</cout>
-            <croissance>1</croissance>
-            <revenu>2</revenu>
-            <vitesse>20000</vitesse>
-            <quantite>4</quantite>
-            <timeleft>5</timeleft>
+            <name>Lamaternelle</name>
+            <logo>/icones/lama2.jpg</logo>
+            <cout>200</cout>
+            <croissance>1.3</croissance>
+            <revenu>60</revenu>
+            <vitesse>60000</vitesse>
+            <quantite>0</quantite>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -89,14 +82,14 @@ and open the template in the editor.
         </product>
         <product>
             <id>03</id>
-            <name>lamamour</name>
+            <name>Lamachine</name>
             <logo>/icones/lama4.jpg</logo>
-            <cout>100</cout>
-            <croissance>1</croissance>
-            <revenu>2</revenu>
-            <vitesse>20000</vitesse>
-            <quantite>4</quantite>
-            <timeleft>5</timeleft>
+            <cout>800</cout>
+            <croissance>1.4</croissance>
+            <revenu>250</revenu>
+            <vitesse>150000</vitesse>
+            <quantite>0</quantite>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -112,14 +105,14 @@ and open the template in the editor.
         </product>
         <product>
             <id>04</id>
-            <name>lamamour</name>
+            <name>Lamasochiste</name>
             <logo>/icones/lama5.jpg</logo>
-            <cout>100</cout>
-            <croissance>1</croissance>
-            <revenu>2</revenu>
-            <vitesse>20000</vitesse>
-            <quantite>4</quantite>
-            <timeleft>5</timeleft>
+            <cout>3800</cout>
+            <croissance>1.5</croissance>
+            <revenu>1200</revenu>
+            <vitesse>300000</vitesse>
+            <quantite>0</quantite>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -135,14 +128,14 @@ and open the template in the editor.
         </product>
         <product>
             <id>05</id>
-            <name>lamamour</name>
+            <name>Lamagie</name>
             <logo>/icones/lama6.jpg</logo>
-            <cout>100</cout>
-            <croissance>1</croissance>
-            <revenu>2</revenu>
-            <vitesse>20000</vitesse>
-            <quantite>4</quantite>
-            <timeleft>5</timeleft>
+            <cout>76000</cout>
+            <croissance>1.6</croissance>
+            <revenu>27000</revenu>
+            <vitesse>600000</vitesse>
+            <quantite>0</quantite>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -251,7 +244,7 @@ and open the template in the editor.
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>loutre de compagnie</name>
+            <name>Lamarauxcanards</name>
             <logo>/icones/loutre1.jpg</logo>
             <seuil>300</seuil>
             <idcible>01</idcible>
@@ -300,19 +293,55 @@ and open the template in the editor.
     </angelupgrades>
     <managers>
         <pallier>
-            <name>Lucas le lamager</name>
+            <name>Lamalefique</name>
             <logo>/icones/lama9.jpg</logo>
-            <seuil>250</seuil>
+            <seuil>50</seuil>
             <idcible>0</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>Kelig le lamager</name>
+            <name>Lamaternelle</name>
             <logo>/icones/lama10.jpg</logo>
-            <seuil>300</seuil>
+            <seuil>1000</seuil>
             <idcible>01</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Le lamacho</name>
+            <logo>/icones/lama9.jpg</logo>
+            <seuil>10000</seuil>
+            <idcible>0</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Le lamator</name>
+            <logo>/icones/lama9.jpg</logo>
+            <seuil>100000</seuil>
+            <idcible>0</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Lamajorante</name>
+            <logo>/icones/lama9.jpg</logo>
+            <seuil>1000000</seuil>
+            <idcible>0</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Lamafia</name>
+            <logo>/icones/lama9.jpg</logo>
+            <seuil>1000000</seuil>
+            <idcible>0</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
