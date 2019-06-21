@@ -5,6 +5,7 @@ import generated.PallierType;
 import generated.PalliersType;
 import generated.ProductType;
 import generated.ProductsType;
+import generated.TyperatioType;
 import generated.World;
 import java.io.File;
 import java.io.FileInputStream;
@@ -142,7 +143,9 @@ public class Services {
         if (qtchange > 0) {
             // soustraire de l'argent du joueur le cout de la quantité
             // achetée et mettre à jour la quantité de product
-            double cost = (product.getCout() * (1 - Math.pow(product.getCroissance(), newproduct.getQuantite()))/(1 - product.getCroissance()));
+            double cost = product.getCout() * (
+                    ((1 - Math.pow(product.getCroissance(), newproduct.getQuantite()))/(1 - product.getCroissance()))
+                    -((1 - Math.pow(product.getCroissance(), product.getQuantite()))/(1 - product.getCroissance())) );
             world.setMoney(world.getMoney() - cost);
             product.setQuantite(qtchange + product.getQuantite());
         } else {
@@ -152,7 +155,7 @@ public class Services {
              world.setLastupdate(System.currentTimeMillis());
         }
         
-        
+        product.setPalliers(newproduct.getPalliers());
         
         // sauvegarder les changements du monde
         saveWordlToXml(world, username);
@@ -228,16 +231,34 @@ public class Services {
             if(p.isManagerUnlocked()){ //les managers
 
                 double nbProduction = Math.floor((timeDiff - p.getTimeleft())/p.getVitesse());
-                w.setMoney(p.getRevenu()*p.getQuantite()* nbProduction + w.getMoney());
-                w.setScore(w.getScore() + p.getRevenu()*p.getQuantite()* nbProduction );
-                long newTimeLeft = (long) ((timeDiff - p.getTimeleft())%p.getVitesse());
+                
+               double win = p.getRevenu()*p.getQuantite() ;
+               double generatedMoney = win;
+               
+               for(PallierType pallier: p.getPalliers().getPallier()){
+                   if(pallier.getTyperatio().compareTo(TyperatioType.GAIN)==1){
+                       generatedMoney += (win * (pallier.getRatio() - 1));
+                   }
+               }
+                
+                w.setMoney(generatedMoney* nbProduction + w.getMoney());
+                w.setScore(w.getScore() + generatedMoney* nbProduction );
+                long newTimeLeft = (long) ((timeDiff - p.getTimeleft())%p.getVitesse());//TODO
                 p.setTimeleft(newTimeLeft);
                 
             } else if(p.getTimeleft() <= timeDiff && p.getTimeleft()>0){            //click sur un produit
-               //ajout du revenu du produit dans le score              
-                w.setMoney(p.getRevenu()*p.getQuantite() + w.getMoney());
-                w.setScore(w.getScore() + p.getRevenu()*p.getQuantite() );
-                p.setTimeleft(0);
+               //ajout du revenu du produit dans le score   
+               double win = p.getRevenu()*p.getQuantite() ;
+               double generatedMoney = win;
+               
+               for(PallierType pallier: p.getPalliers().getPallier()){
+                   if(pallier.isUnlocked() && pallier.getTyperatio().compareTo(TyperatioType.GAIN)==0){
+                       generatedMoney += (win * (pallier.getRatio() - 1));
+                   }
+               }
+               w.setMoney(generatedMoney+ w.getMoney());
+               w.setScore(w.getScore() + generatedMoney );
+               p.setTimeleft(0);
             }
             
             

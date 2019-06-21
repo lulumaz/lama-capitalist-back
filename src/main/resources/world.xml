@@ -29,7 +29,7 @@
                     <seuil>40</seuil>
                     <idcible>0</idcible>
                     <ratio>1.2</ratio>
-                    <typeratio>VITESSE</typeratio>
+                    <typeratio>gain</typeratio>
                     <unlocked>false</unlocked>
                 </pallier> 
                 <pallier>
@@ -38,7 +38,7 @@
                     <seuil>75</seuil>
                     <idcible>0</idcible>
                     <ratio>1.3</ratio>
-                    <typeratio>GAIN</typeratio>
+                    <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>                     
             </palliers>
