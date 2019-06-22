@@ -151,8 +151,17 @@ public class Services {
         } else {
             // initialiser product.timeleft à product.vitesse
             // pour lancer la production
-             product.setTimeleft(product.getVitesse());
-             world.setLastupdate(System.currentTimeMillis());
+            
+            long bonusVitesse = 1;
+               
+            for(PallierType pallier: product.getPalliers().getPallier()){
+                if(pallier.isUnlocked() && pallier.getTyperatio().compareTo(TyperatioType.VITESSE)==0){
+                    bonusVitesse = (long) (bonusVitesse * pallier.getRatio());
+                }
+            }
+               
+            product.setTimeleft(product.getVitesse()/bonusVitesse);
+            world.setLastupdate(System.currentTimeMillis());
         }
         
         product.setPalliers(newproduct.getPalliers());
@@ -229,8 +238,16 @@ public class Services {
            
                        
             if(p.isManagerUnlocked()){ //les managers
+                
+                long bonusVitesse = 1;
+               
+                for(PallierType pallier: p.getPalliers().getPallier()){
+                    if(pallier.isUnlocked() && pallier.getTyperatio().compareTo(TyperatioType.VITESSE)==0){
+                        bonusVitesse = (long) (bonusVitesse * pallier.getRatio());
+                    }
+                }
 
-                double nbProduction = Math.floor((timeDiff - p.getTimeleft())/p.getVitesse());
+               double nbProduction = Math.floor((timeDiff - p.getTimeleft())/p.getVitesse())*bonusVitesse;
                 
                double win = p.getRevenu()*p.getQuantite() ;
                double generatedMoney = win;
@@ -243,7 +260,7 @@ public class Services {
                 
                 w.setMoney(generatedMoney* nbProduction + w.getMoney());
                 w.setScore(w.getScore() + generatedMoney* nbProduction );
-                long newTimeLeft = (long) ((timeDiff - p.getTimeleft())%p.getVitesse());//TODO
+                long newTimeLeft = (long) ((timeDiff - p.getTimeleft())%(p.getVitesse()/bonusVitesse));
                 p.setTimeleft(newTimeLeft);
                 
             } else if(p.getTimeleft() <= timeDiff && p.getTimeleft()>0){            //click sur un produit

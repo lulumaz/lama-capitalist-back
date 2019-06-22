@@ -24,6 +24,15 @@
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
+                    <name>palier 0</name>
+                    <logo>/icones/lama0.jpg</logo>
+                    <seuil>5</seuil>
+                    <idcible>0</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
+                <pallier>
                     <name>palier 1</name>
                     <logo>/icones/lama0.jpg</logo>
                     <seuil>40</seuil>

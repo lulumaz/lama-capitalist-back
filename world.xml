@@ -7,7 +7,7 @@
     <totalangels>0.0</totalangels>
     <activeangels>0.0</activeangels>
     <angelbonus>0</angelbonus>
-    <lastupdate>1561152923080</lastupdate>
+    <lastupdate>1561201580553</lastupdate>
     <products>
         <product>
             <id>0</id>
@@ -21,6 +21,15 @@
             <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
+                <pallier>
+                    <name>palier 0</name>
+                    <logo>/icones/lama0.jpg</logo>
+                    <seuil>5.0</seuil>
+                    <idcible>0</idcible>
+                    <ratio>2.0</ratio>
+                    <typeratio>vitesse</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>
                 <pallier>
                     <name>palier 1</name>
                     <logo>/icones/lama0.jpg</logo>
