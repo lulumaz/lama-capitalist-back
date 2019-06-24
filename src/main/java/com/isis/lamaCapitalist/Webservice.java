@@ -79,7 +79,17 @@ public class Webservice {
         }
     }
     
-    
+    @PUT
+    @Path("upgrade")
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Response putUpdate(@Context HttpServletRequest request, PallierType upgrade) {
+        String username = request.getHeader("X-user");
+        if(username!=null){
+            return Response.ok(services.updateUpgrade(username,upgrade)).build();
+        } else {
+           return Response.ok(services.updateUpgrade(upgrade)).build();
+        }
+    }
     
 
     

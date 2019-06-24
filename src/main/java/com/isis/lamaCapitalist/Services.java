@@ -159,6 +159,8 @@ public class Services {
                     bonusVitesse = (long) (bonusVitesse * pallier.getRatio());
                 }
             }
+            
+            bonusVitesse = this.getUpdatesBonusVitesse(world.getUpgrades(), product, bonusVitesse);
                
             product.setTimeleft(product.getVitesse()/bonusVitesse);
             world.setLastupdate(System.currentTimeMillis());
@@ -239,7 +241,7 @@ public class Services {
                        
             if(p.isManagerUnlocked()){ //les managers
                 
-                long bonusVitesse = 1;
+               long bonusVitesse = 1;
                
                 for(PallierType pallier: p.getPalliers().getPallier()){
                     if(pallier.isUnlocked() && pallier.getTyperatio().compareTo(TyperatioType.VITESSE)==0){
@@ -247,17 +249,19 @@ public class Services {
                     }
                 }
 
+                bonusVitesse = this.getUpdatesBonusVitesse(w.getUpgrades(), p, bonusVitesse);
+                
                double nbProduction = Math.floor((timeDiff - p.getTimeleft())/p.getVitesse())*bonusVitesse;
                 
                double win = p.getRevenu()*p.getQuantite() ;
                double generatedMoney = win;
-               
+              
                for(PallierType pallier: p.getPalliers().getPallier()){
-                   if(pallier.getTyperatio().compareTo(TyperatioType.GAIN)==1){
-                       generatedMoney += (win * (pallier.getRatio() - 1));
+                   if(pallier.isUnlocked() && pallier.getTyperatio().compareTo(TyperatioType.GAIN)==0){
+                       generatedMoney += (generatedMoney * (pallier.getRatio()-1));
                    }
                }
-                
+                generatedMoney = getUpdatesGain(w.getUpgrades(), p,generatedMoney);
                 w.setMoney(generatedMoney* nbProduction + w.getMoney());
                 w.setScore(w.getScore() + generatedMoney* nbProduction );
                 long newTimeLeft = (long) ((timeDiff - p.getTimeleft())%(p.getVitesse()/bonusVitesse));
@@ -267,12 +271,12 @@ public class Services {
                //ajout du revenu du produit dans le score   
                double win = p.getRevenu()*p.getQuantite() ;
                double generatedMoney = win;
-               
                for(PallierType pallier: p.getPalliers().getPallier()){
                    if(pallier.isUnlocked() && pallier.getTyperatio().compareTo(TyperatioType.GAIN)==0){
-                       generatedMoney += (win * (pallier.getRatio() - 1));
+                       generatedMoney += (generatedMoney * (pallier.getRatio()-1));
                    }
                }
+               generatedMoney = getUpdatesGain(w.getUpgrades(), p,generatedMoney);
                w.setMoney(generatedMoney+ w.getMoney());
                w.setScore(w.getScore() + generatedMoney );
                p.setTimeleft(0);
@@ -296,5 +300,69 @@ public class Services {
         
         return null;
     }
-     
+    
+    private double getUpdatesGain(PalliersType p, ProductType product, double bonusGain){
+        int id = product.getId();
+        double bonus = bonusGain;
+        for(PallierType pallier : p.getPallier()){
+            if(pallier.getIdcible() == id && pallier.getTyperatio().compareTo(TyperatioType.GAIN)==0 && pallier.isUnlocked()){
+               bonus += (long) (bonus * (pallier.getRatio()-1));
+            }
+        }
+        return bonus;
+    }
+    
+    private long getUpdatesBonusVitesse(PalliersType p, ProductType product, long bonusVitesse ){
+        int id = product.getId();
+        System.out.println("avant : "+ bonusVitesse);
+        long bonus = bonusVitesse;
+        for(PallierType pallier : p.getPallier()){
+            if(pallier.getIdcible() == id && pallier.getTyperatio().compareTo(TyperatioType.VITESSE)==0 && pallier.isUnlocked()){
+               bonus = (long) (bonus * pallier.getRatio());
+            }
+        }
+                System.out.println("après : "+ bonus);
+
+        return bonus;
+    }
+    
+    public Boolean updateUpgrade(PallierType update){
+        return this.updateUpgrade(null,update);
+    }
+    
+    public Boolean updateUpgrade(String username , PallierType newUpgrade){
+        
+        // aller chercher le monde qui correspond au joueur
+        World world;
+        if(username!=null){
+           world = readWorldFromXml(username);
+        } else {
+           world = readWorldFromXml();
+        }
+        
+        PallierType upgrade = this.findUpgradeByName(world, newUpgrade.getName());
+        if(upgrade==null){
+            System.err.println("l'upgrade "+upgrade.getName()+" de "+ username + " n'existe pas.");
+            return false;
+        }
+        
+        upgrade.setUnlocked(newUpgrade.isUnlocked());
+        
+        // sauvegarder les changements au monde
+        saveWordlToXml(world,username);
+        
+        return true;
+    }
+    
+    private PallierType findUpgradeByName(World w,String name){
+        
+        for(PallierType upgrade : w.getUpgrades().getPallier()){
+            if(upgrade.getName().equals(name)){
+                return upgrade;
+            }
+        }
+        
+        return null;
+    }
+    
 }

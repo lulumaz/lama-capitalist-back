@@ -192,90 +192,18 @@
         <pallier>
             <name>loutre de compagnie</name>
             <logo>/icones/loutre1.jpg</logo>
-            <seuil>300</seuil>
-            <idcible>01</idcible>
-            <ratio>2.0</ratio>
+            <seuil>10.0</seuil>
+            <idcible>0</idcible>
+            <ratio>20.0</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
             <name>selle pour lama</name>
             <logo>/icones/lama5.jpg</logo>
-            <seuil>300</seuil>
-            <idcible>02</idcible>
-            <ratio>2.0</ratio>
-            <typeratio>vitesse</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>loutre de compagnie</name>
-            <logo>/icones/loutre1.jpg</logo>
-            <seuil>300</seuil>
-            <idcible>01</idcible>
-            <ratio>2.0</ratio>
-            <typeratio>gain</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>selle pour lama</name>
-            <logo>/icones/lama5.jpg</logo>
-            <seuil>300</seuil>
-            <idcible>02</idcible>
-            <ratio>2.0</ratio>
-            <typeratio>vitesse</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>loutre de compagnie</name>
-            <logo>/icones/loutre1.jpg</logo>
-            <seuil>300</seuil>
-            <idcible>01</idcible>
-            <ratio>2.0</ratio>
-            <typeratio>gain</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>selle pour lama</name>
-            <logo>/icones/lama5.jpg</logo>
-            <seuil>300</seuil>
-            <idcible>02</idcible>
-            <ratio>2.0</ratio>
-            <typeratio>vitesse</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>loutre de compagnie</name>
-            <logo>/icones/loutre1.jpg</logo>
-            <seuil>300</seuil>
-            <idcible>01</idcible>
-            <ratio>2.0</ratio>
-            <typeratio>gain</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>selle pour lama</name>
-            <logo>/icones/lama5.jpg</logo>
-            <seuil>300</seuil>
-            <idcible>02</idcible>
-            <ratio>2.0</ratio>
-            <typeratio>vitesse</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>Lamarauxcanards</name>
-            <logo>/icones/loutre1.jpg</logo>
-            <seuil>300</seuil>
-            <idcible>01</idcible>
-            <ratio>2.0</ratio>
-            <typeratio>gain</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>selle pour lama</name>
-            <logo>/icones/lama5.jpg</logo>
-            <seuil>300</seuil>
-            <idcible>02</idcible>
-            <ratio>2.0</ratio>
+            <seuil>300.0</seuil>
+            <idcible>0</idcible>
+            <ratio>200.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
