@@ -7,7 +7,7 @@
     <totalangels>0.0</totalangels>
     <activeangels>0.0</activeangels>
     <angelbonus>0</angelbonus>
-    <lastupdate>1561474988470</lastupdate>
+    <lastupdate>1561490935503</lastupdate>
     <products>
         <product>
             <id>0</id>
@@ -16,7 +16,7 @@
             <cout>4.0</cout>
             <croissance>1.07</croissance>
             <revenu>1.0</revenu>
-            <vitesse>500</vitesse>
+            <vitesse>1000</vitesse>
             <quantite>1</quantite>
             <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
