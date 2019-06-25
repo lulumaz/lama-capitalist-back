@@ -4,7 +4,7 @@
     xsi:noNamespaceSchemaLocation='jaxb/World/worldSchema.xsd'>
     <name>Le monde des lamas !</name>
     <logo>/icones/lama11.png</logo>
-    <money>30</money>
+    <money>0</money>
     <score>0</score>
     <totalangels>0</totalangels>
     <activeangels>0</activeangels>
@@ -14,26 +14,26 @@
         <product>
             <id>0</id>
             <name>Lamacaron</name>
-            <logo>/icones/lama0.jpg</logo>
-            <cout>10</cout> 
-            <croissance>1.1</croissance>
-            <revenu>2</revenu>
+            <logo>/icones/lama45.jpg</logo>
+            <cout>4</cout> 
+            <croissance>1.07</croissance>
+            <revenu>1</revenu>
             <vitesse>1000</vitesse>
             <quantite>1</quantite>
             <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
-                    <name>palier 0</name>
+                    <name>Petit Lamacaron</name>
                     <logo>/icones/lama0.jpg</logo>
-                    <seuil>5</seuil>
+                    <seuil>20</seuil>
                     <idcible>0</idcible>
-                    <ratio>2</ratio>
+                    <ratio>1.5</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>
                 <pallier>
-                    <name>palier 1</name>
+                    <name>Grand Lamacaron</name>
                     <logo>/icones/lama0.jpg</logo>
                     <seuil>40</seuil>
                     <idcible>0</idcible>
@@ -42,7 +42,7 @@
                     <unlocked>false</unlocked>
                 </pallier> 
                 <pallier>
-                    <name>palier 2</name>
+                    <name>Super Lamacaron</name>
                     <logo>/icones/lama0.jpg</logo>
                     <seuil>75</seuil>
                     <idcible>0</idcible>
@@ -55,21 +55,21 @@
         <product>
             <id>1</id>
             <name>Lamamour</name>
-            <logo>/icones/lama1.jpg</logo>
-            <cout>50</cout>
-            <croissance>1.2</croissance>
-            <revenu>13</revenu>
-            <vitesse>5000</vitesse>
+            <logo>/icones/lama39.jpg</logo>
+            <cout>60</cout>
+            <croissance>1.15</croissance>
+            <revenu>60</revenu>
+            <vitesse>3000</vitesse>
             <quantite>0</quantite>
             <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
-                    <name>palier1</name>
+                    <name> Saint valentin</name>
                     <logo>/icones/lama2.jpg</logo>
-                    <seuil>3.1415926535</seuil>
-                    <idcible>123</idcible>
-                    <ratio>3.1415926535</ratio>
+                    <seuil>100</seuil>
+                    <idcible>1</idcible>
+                    <ratio>3</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>                  
@@ -78,22 +78,22 @@
         <product>
             <id>02</id>
             <name>Lamaternelle</name>
-            <logo>/icones/lama2.jpg</logo>
-            <cout>200</cout>
-            <croissance>1.3</croissance>
-            <revenu>60</revenu>
-            <vitesse>60000</vitesse>
+            <logo>/icones/lama50.jpg</logo>
+            <cout>720</cout>
+            <croissance>1.14</croissance>
+            <revenu>540</revenu>
+            <vitesse>6000</vitesse>
             <quantite>0</quantite>
             <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
-                    <name>palier1</name>
+                    <name>Nounou</name>
                     <logo>/icones/lama2.jpg</logo>
-                    <seuil>3.1415926535</seuil>
-                    <idcible>123</idcible>
-                    <ratio>3.1415926535</ratio>
-                    <typeratio>vitesse</typeratio>
+                    <seuil>30</seuil>
+                    <idcible>2</idcible>
+                    <ratio>1.7</ratio>
+                    <typeratio>gain</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>                  
             </palliers>
@@ -101,21 +101,30 @@
         <product>
             <id>03</id>
             <name>Lamachine</name>
-            <logo>/icones/lama4.jpg</logo>
-            <cout>800</cout>
-            <croissance>1.4</croissance>
-            <revenu>250</revenu>
-            <vitesse>150000</vitesse>
+            <logo>/icones/lama37.jpg</logo>
+            <cout>8640</cout>
+            <croissance>1.13</croissance>
+            <revenu>4320</revenu>
+            <vitesse>12000</vitesse>
             <quantite>0</quantite>
             <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
-                    <name>palier1</name>
+                    <name>Lamachinealaver</name>
                     <logo>/icones/lama2.jpg</logo>
-                    <seuil>3.1415926535</seuil>
+                    <seuil>30</seuil>
                     <idcible>123</idcible>
-                    <ratio>3.1415926535</ratio>
+                    <ratio>1.5</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>  
+                <pallier>
+                    <name>Lamachineacoudre</name>
+                    <logo>/icones/lama2.jpg</logo>
+                    <seuil>75</seuil>
+                    <idcible>123</idcible>
+                    <ratio>1.9</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>                  
@@ -125,20 +134,29 @@
             <id>04</id>
             <name>Lamasochiste</name>
             <logo>/icones/lama5.jpg</logo>
-            <cout>3800</cout>
-            <croissance>1.5</croissance>
-            <revenu>1200</revenu>
-            <vitesse>300000</vitesse>
+            <cout>103640</cout>
+            <croissance>1.12</croissance>
+            <revenu>51840</revenu>
+            <vitesse>24000</vitesse>
             <quantite>0</quantite>
             <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
-                    <name>palier1</name>
+                    <name>Lamatreize</name>
                     <logo>/icones/lama2.jpg</logo>
-                    <seuil>3.1415926535</seuil>
-                    <idcible>123</idcible>
-                    <ratio>3.1415926535</ratio>
+                    <seuil>20</seuil>
+                    <idcible>4</idcible>
+                    <ratio>1.3</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier> 
+                <pallier>
+                    <name>Lamazo</name>
+                    <logo>/icones/lama2.jpg</logo>
+                    <seuil>45</seuil>
+                    <idcible>4</idcible>
+                    <ratio>2</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>                  
@@ -147,21 +165,30 @@
         <product>
             <id>05</id>
             <name>Lamagie</name>
-            <logo>/icones/lama6.jpg</logo>
-            <cout>76000</cout>
-            <croissance>1.6</croissance>
-            <revenu>27000</revenu>
-            <vitesse>600000</vitesse>
+            <logo>/icones/lama40.jpg</logo>
+            <cout>1244160</cout>
+            <croissance>1.11</croissance>
+            <revenu>622080</revenu>
+            <vitesse>96000</vitesse>
             <quantite>0</quantite>
             <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
-                    <name>palier1</name>
+                    <name>LamaHarry</name>
                     <logo>/icones/lama2.jpg</logo>
-                    <seuil>3.1415926535</seuil>
-                    <idcible>123</idcible>
-                    <ratio>3.1415926535</ratio>
+                    <seuil>40</seuil>
+                    <idcible>5</idcible>
+                    <ratio>2</ratio>
+                    <typeratio>gain</typeratio>
+                    <unlocked>false</unlocked>
+                </pallier>     
+                <pallier>
+                    <name>Lamarouman</name>
+                    <logo>/icones/lama2.jpg</logo>
+                    <seuil>60</seuil>
+                    <idcible>5</idcible>
+                    <ratio>1.5</ratio>
                     <typeratio>vitesse</typeratio>
                     <unlocked>false</unlocked>
                 </pallier>                  
@@ -179,7 +206,7 @@
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>Lucia di lamamour</name>
+            <name>Lamajorette</name>
             <logo>/icones/lama4.jpg</logo>
             <seuil>250</seuil>
             <idcible>02</idcible>
@@ -190,20 +217,74 @@
     </allunlocks>
     <upgrades>
         <pallier>
-            <name>loutre de compagnie</name>
+            <name>Loutre de compagnie</name>
             <logo>/icones/loutre1.jpg</logo>
-            <seuil>10.0</seuil>
+            <seuil>500.0</seuil>
             <idcible>0</idcible>
-            <ratio>20.0</ratio>
+            <ratio>1.3</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>selle pour lama</name>
-            <logo>/icones/lama5.jpg</logo>
-            <seuil>300.0</seuil>
-            <idcible>0</idcible>
+            <name>Selle</name>
+            <logo>/icones/selle.jpg</logo>
+            <seuil>1500</seuil>
+            <idcible>1</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Fromage</name>
+            <logo>/icones/fromage.jpg</logo>
+            <seuil>15000</seuil>
+            <idcible>1</idcible>
             <ratio>200.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Un Lamarabout</name>
+            <logo>/icones/lama6.jpg</logo>
+            <seuil>15000</seuil>
+            <idcible>2</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Un Lamazel</name>
+            <logo>/icones/managers/manager5.jpg</logo>
+            <seuil>34000</seuil>
+            <idcible>3</idcible>
+            <ratio>3.0</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Super chaussette magique</name>
+            <logo>/icones/chaussette.jpg</logo>
+            <seuil>120000</seuil>
+            <idcible>4</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Ranch</name>
+            <logo>/icones/ranch.jpg</logo>
+            <seuil>324000</seuil>
+            <idcible>5</idcible>
+            <ratio>2.0</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Une Lamazda</name>
+            <logo>/icones/lamazda.jpg</logo>
+            <seuil>160000000</seuil>
+            <idcible>5</idcible>
+            <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
@@ -240,8 +321,8 @@
     <managers>
         <pallier>
             <name>Lamalefique</name>
-            <logo>/icones/lama9.jpg</logo>
-            <seuil>50</seuil>
+            <logo>/icones/managers/manager4.jpg</logo>
+            <seuil>1000</seuil>
             <idcible>0</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
@@ -249,8 +330,8 @@
         </pallier>
         <pallier>
             <name>Lamaternelle</name>
-            <logo>/icones/lama10.jpg</logo>
-            <seuil>1000</seuil>
+            <logo>/icones/managers/manager1.jpg</logo>
+            <seuil>15000</seuil>
             <idcible>01</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
@@ -258,17 +339,17 @@
         </pallier>
         <pallier>
             <name>Le lamacho</name>
-            <logo>/icones/lama9.jpg</logo>
-            <seuil>10000</seuil>
+            <logo>/icones/managers/manager3.jpg</logo>
+            <seuil>100000</seuil>
             <idcible>2</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>Le lamator</name>
-            <logo>/icones/lama9.jpg</logo>
-            <seuil>100000</seuil>
+            <name>Le Lamarabout</name>
+            <logo>/icones/managers/manager2.jpg</logo>
+            <seuil>500000</seuil>
             <idcible>3</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
@@ -276,8 +357,8 @@
         </pallier>
         <pallier>
             <name>Lamajorante</name>
-            <logo>/icones/lama9.jpg</logo>
-            <seuil>1000000</seuil>
+            <logo>/icones/managers/manager0.jpg</logo>
+            <seuil>1200000</seuil>
             <idcible>4</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>
@@ -285,8 +366,8 @@
         </pallier>
         <pallier>
             <name>Lamafia</name>
-            <logo>/icones/lama9.jpg</logo>
-            <seuil>1000000</seuil>
+            <logo>/icones/managers/manager5.jpg</logo>
+            <seuil>10000000</seuil>
             <idcible>5</idcible>
             <ratio>2.0</ratio>
             <typeratio>vitesse</typeratio>

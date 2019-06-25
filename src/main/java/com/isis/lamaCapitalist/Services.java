@@ -41,7 +41,7 @@ public class Services {
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             w = (World) unmarshaller.unmarshal(input);
             updatePoducts(w);
-            w.setLastupdate(System.currentTimeMillis());
+            //w.setLastupdate(System.currentTimeMillis());
             saveWordlToXml(w);
             return w;
         } catch (JAXBException ex) {
@@ -60,7 +60,7 @@ public class Services {
                 Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
                 w = (World) unmarshaller.unmarshal(input);
                 updatePoducts(w);
-                w.setLastupdate(System.currentTimeMillis());
+                //w.setLastupdate(System.currentTimeMillis());
                 saveWordlToXml(w,pseudo);  
                 return w;
             } catch (JAXBException ex) {
@@ -78,6 +78,7 @@ public class Services {
     public void saveWordlToXml(World world){
         //OutputStream output = new FileOutputStream(file);
         JAXBContext jaxbContext;
+        world.setLastupdate(System.currentTimeMillis());
         try {
             jaxbContext = JAXBContext.newInstance(World.class);
             Marshaller marshaller = jaxbContext.createMarshaller();
@@ -90,6 +91,8 @@ public class Services {
     
      public void saveWordlToXml(World world,String pseudo){
          //OutputStream output = new FileOutputStream(file);
+         
+        world.setLastupdate(System.currentTimeMillis());
         JAXBContext jaxbContext;
         try {
             jaxbContext = JAXBContext.newInstance(World.class);
@@ -261,7 +264,7 @@ public class Services {
                        generatedMoney += (generatedMoney * (pallier.getRatio()-1));
                    }
                }
-                generatedMoney = getUpdatesGain(w.getUpgrades(), p,generatedMoney);
+                generatedMoney = getUpdatesGain(w.getUpgrades(), p,generatedMoney);                                                        
                 w.setMoney(generatedMoney* nbProduction + w.getMoney());
                 w.setScore(w.getScore() + generatedMoney* nbProduction );
                 long newTimeLeft = (long) ((timeDiff - p.getTimeleft())%(p.getVitesse()/bonusVitesse));
@@ -280,14 +283,14 @@ public class Services {
                w.setMoney(generatedMoney+ w.getMoney());
                w.setScore(w.getScore() + generatedMoney );
                p.setTimeleft(0);
+            } else if(p.getTimeleft()>0){
+                p.setTimeleft((long) (p.getTimeleft() - timeDiff));
             }
-            
-            
             
             
            
        } 
-        
+        w.setLastupdate(System.currentTimeMillis());
     }
     
     private PallierType findManager(World w, ProductType p){
@@ -314,15 +317,12 @@ public class Services {
     
     private long getUpdatesBonusVitesse(PalliersType p, ProductType product, long bonusVitesse ){
         int id = product.getId();
-        System.out.println("avant : "+ bonusVitesse);
         long bonus = bonusVitesse;
         for(PallierType pallier : p.getPallier()){
             if(pallier.getIdcible() == id && pallier.getTyperatio().compareTo(TyperatioType.VITESSE)==0 && pallier.isUnlocked()){
                bonus = (long) (bonus * pallier.getRatio());
             }
         }
-                System.out.println("après : "+ bonus);
-
         return bonus;
     }
     
