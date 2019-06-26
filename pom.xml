@@ -23,7 +23,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jersey</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -34,6 +33,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+	 <dependency>
+	  <groupId>com.google.code.gson</groupId>
+	  <artifactId>gson</artifactId>
+	  <version>2.8.5</version>
+	 </dependency>
 	</dependencies>
 
 	<build>
@@ -42,6 +46,32 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+		 <plugin>
+		  <groupId>org.jvnet.jaxb2.maven2</groupId>
+		  <artifactId>maven-jaxb2-plugin</artifactId>
+		  <version>0.12.0</version>
+		  <executions>
+		   <execution>
+		    <goals>
+		     <goal>generate</goal>
+		    </goals>
+		    <configuration>
+		     <schemaIncludes>
+		      <include>jaxb/World/*.xsd</include>
+		     </schemaIncludes>
+		     <episodeFile>${project.build.directory}/generated-sources/xjc/META-INF/jaxb-World.episode</episodeFile>
+		    </configuration>
+		    <id>jaxb-generate-World</id>
+		   </execution>
+		  </executions>
+		  <configuration>
+		   <catalog>src/main/resources/jaxb/catalog.xml</catalog>
+		   <catalogResolver>org.jvnet.jaxb2.maven2.resolver.tools.ClasspathCatalogResolver</catalogResolver>
+		   <forceRegenerate>true</forceRegenerate>
+		   <generateDirectory>${project.build.directory}/generated-sources/xjc</generateDirectory>
+		   <verbose>true</verbose>
+		  </configuration>
+		 </plugin>
 		</plugins>
 	</build>
 
